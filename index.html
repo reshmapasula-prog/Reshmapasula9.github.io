@@ -1,161 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>P. Reshma | Portfolio</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>P. Reshma | Portfolio</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background: #f4f6f8;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
             color: #222;
+            line-height: 1.6;
         }
 
         header {
-            background: #222;
+            background: #172033;
             color: white;
+            padding: 50px 20px;
             text-align: center;
-            padding: 60px 20px;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 42px;
             margin-bottom: 10px;
         }
 
         header p {
             font-size: 18px;
+            color: #d8dee9;
+        }
+
+        nav {
+            background: #0f172a;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
-            margin: 10px;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
         }
 
         section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
+            padding: 50px 0;
         }
 
-        h2 {
-            border-bottom: 2px solid #222;
-            padding-bottom: 8px;
-        }
-
-        .project {
+        section h2 {
+            font-size: 30px;
+            color: #172033;
+            border-bottom: 2px solid #172033;
+            padding-bottom: 10px;
             margin-bottom: 25px;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
+        .about {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        a {
-            color: #0066cc;
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #172033;
+            margin-bottom: 8px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #172033;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .project {
+            border-left: 5px solid #172033;
+        }
+
+        .contact p {
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 22px;
+            background: #172033;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        footer {
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>P. Reshma</h1>
+    <!-- Header -->
+    <header>
+        <h1>P. Reshma</h1>
+        <p>Computer Science Engineering Student | Cyber Security Enthusiast</p>
+    </header>
 
-    <p>Computer Science Student | Python | Java | Web Development</p>
-
+    <!-- Navigation -->
     <nav>
-        <a href="https://github.com/Reshmapasula9">GitHub</a>
-        <a href="https://leetcode.com/u/Reshmapasula9/">LeetCode</a>
-        <a href="#">LinkedIn</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
-</header>
 
-<section>
-    <h2>About Me</h2>
+    <div class="container">
 
-    <p>
-        I am a Computer Science student interested in software development,
-        Artificial Intelligence, Machine Learning and Web Development.
-        I enjoy building projects and solving programming problems.
-    </p>
-</section>
+        <!-- About -->
+        <section id="about">
+            <h2>About Me</h2>
 
-<section>
-    <h2>Skills</h2>
+            <div class="about">
+                <p>
+                    I am a B.Tech student specializing in Computer Science and
+                    Engineering with Cyber Security. I am interested in
+                    software development, cybersecurity, artificial intelligence,
+                    and web technologies.
+                </p>
 
-    <p><b>Programming:</b> Java, Python, C, JavaScript, SQL</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </section>
 
-    <p><b>Web Development:</b> HTML, CSS, JavaScript</p>
 
-    <p><b>Database:</b> MySQL</p>
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
 
-    <p><b>Tools:</b> Git, GitHub, VS Code, Jupyter Notebook</p>
+            <div class="card">
+                <h3>B.Tech in Computer Science and Engineering (Cyber Security)</h3>
 
-    <p><b>AI/ML:</b> Machine Learning, NLP, Scikit-learn</p>
-</section>
+                <p>
+                    <strong>AVN Institute of Engineering and Technology</strong>
+                    | 2024 – 2028
+                </p>
+            </div>
+        </section>
 
-<section>
-    <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Student Performance Predictor</h3>
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
 
-        <p>
-            A machine learning project developed using Python,
-            Pandas, NumPy and Scikit-learn.
-        </p>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Cyber Security</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">SQL</span>
+            </div>
+        </section>
 
-        <a href="https://github.com/Reshmapasula9">
-            View on GitHub
-        </a>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="card project">
+                <h3>MachShield AI</h3>
+
+                <p>
+                    A Cyber + AI + Mechanical project designed to combine
+                    machine monitoring, cybersecurity analysis, operational
+                    data analysis, and intelligent decision-making.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    AI, Cyber Security, Python, Flask, HTML, CSS, JavaScript
+                </p>
+            </div>
+
+            <div class="card project">
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website created to showcase my
+                    education, technical skills, projects, and professional
+                    profiles.
+                </p>
+
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML, CSS, JavaScript, GitHub Pages
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <div class="card contact">
+
+                <p>
+                    <strong>Email:</strong>
+                    your-email@gmail.com
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/reshmapasula-prog"
+                       target="_blank">
+                        github.com/reshmapasula-prog
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Portfolio:</strong>
+                    <a href="https://reshmapasula-prog.github.io/"
+                       target="_blank">
+                        reshmapasula-prog.github.io
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn:</strong>
+                    <a href="#" target="_blank">
+                        Add your LinkedIn profile
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LeetCode:</strong>
+                    <a href="https://leetcode.com/"
+                       target="_blank">
+                        LeetCode Profile
+                    </a>
+                </p>
+
+            </div>
+        </section>
+
     </div>
 
-    <div class="project">
-        <h3>Study Helper</h3>
 
-        <p>
-            A web application developed using HTML, CSS and JavaScript
-            to help students organize their study activities.
-        </p>
-
-        <a href="https://github.com/Reshmapasula9">
-            View on GitHub
-        </a>
-    </div>
-</section>
-
-<section>
-    <h2>Education</h2>
-
-    <h3>B.Tech in Computer Science and Engineering</h3>
-
-    <p>College Name | 2023 – 2027</p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-
-    <p>Email: your-email@gmail.com</p>
-
-    <p>
-        GitHub:
-        <a href="https://github.com/Reshmapasula9">
-            github.com/Reshmapasula9
-        </a>
-    </p>
-</section>
-
-<footer>
-    <p>© 2026 P. Reshma | Portfolio</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 P. Reshma | Portfolio</p>
+    </footer>
 
 </body>
 </html>
