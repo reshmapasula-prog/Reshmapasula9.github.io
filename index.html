@@ -1,321 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>P. Reshma | Portfolio</title>
+<title>P. Reshma | Cybersecurity</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
 
-        body {
-            background: #f5f7fa;
-            color: #222;
-            line-height: 1.6;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
 
-        header {
-            background: #172033;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
+body{
+    background:#080b12;
+    color:#e6edf3;
+    line-height:1.6;
+}
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+/* NAVIGATION */
 
-        header p {
-            font-size: 18px;
-            color: #d8dee9;
-        }
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,11,18,0.95);
+    border-bottom:1px solid #1d2938;
+    padding:18px;
+    text-align:center;
+}
 
-        nav {
-            background: #0f172a;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+nav a{
+    color:#cbd5e1;
+    text-decoration:none;
+    margin:0 18px;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+nav a:hover{
+    color:#38bdf8;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+/* HERO */
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-        }
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 8%;
+    background:
+    radial-gradient(circle at 80% 30%,#12324a 0%,transparent 30%),
+    #080b12;
+}
 
-        section {
-            padding: 50px 0;
-        }
+.hero-content{
+    max-width:1100px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
 
-        section h2 {
-            font-size: 30px;
-            color: #172033;
-            border-bottom: 2px solid #172033;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
+.hero-text{
+    flex:1;
+}
 
-        .about {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.hero-text .small{
+    color:#38bdf8;
+    font-size:16px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.hero-text h1{
+    font-size:65px;
+    margin:12px 0;
+    color:white;
+}
 
-        .card h3 {
-            color: #172033;
-            margin-bottom: 8px;
-        }
+.hero-text h1 span{
+    color:#38bdf8;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+.hero-text h2{
+    font-size:28px;
+    color:#cbd5e1;
+    margin-bottom:20px;
+}
 
-        .skill {
-            background: #172033;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 20px;
-        }
+.hero-text p{
+    color:#94a3b8;
+    max-width:600px;
+    font-size:17px;
+}
 
-        .project {
-            border-left: 5px solid #172033;
-        }
+.hero-buttons{
+    margin-top:30px;
+}
 
-        .contact p {
-            margin: 12px 0;
-        }
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin-right:12px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        .contact a {
-            color: #2563eb;
-            text-decoration: none;
-        }
+.primary{
+    background:#38bdf8;
+    color:#061018;
+}
 
-        .contact a:hover {
-            text-decoration: underline;
-        }
+.primary:hover{
+    background:#7dd3fc;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 22px;
-            background: #172033;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+.secondary{
+    border:1px solid #334155;
+    color:white;
+}
 
-        .btn:hover {
-            background: #2563eb;
-        }
+.secondary:hover{
+    border-color:#38bdf8;
+    color:#38bdf8;
+}
 
-        footer {
-            background: #172033;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
+/* PHOTO */
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
-            }
+.photo-area{
+    flex:0 0 330px;
+    display:flex;
+    justify-content:center;
+}
 
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-        }
-    </style>
+.photo-frame{
+    width:310px;
+    height:310px;
+    border-radius:50%;
+    padding:7px;
+    background:linear-gradient(135deg,#38bdf8,#172033,#38bdf8);
+    box-shadow:0 0 50px rgba(56,189,248,0.18);
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    border-radius:50%;
+    border:6px solid #080b12;
+}
+
+/* GENERAL */
+
+.container{
+    width:88%;
+    max-width:1100px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    margin-bottom:35px;
+}
+
+.section-title span{
+    color:#38bdf8;
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:white;
+    margin-top:5px;
+}
+
+/* ABOUT */
+
+.about-box{
+    background:#0d131d;
+    border:1px solid #1e293b;
+    padding:35px;
+    border-radius:12px;
+}
+
+.about-box p{
+    color:#aab7c6;
+    font-size:17px;
+}
+
+/* EDUCATION */
+
+.card{
+    background:#0d131d;
+    border:1px solid #1e293b;
+    padding:30px;
+    border-radius:12px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    border-color:#38bdf8;
+    transform:translateY(-3px);
+}
+
+.card h3{
+    color:white;
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#94a3b8;
+}
+
+.highlight{
+    color:#38bdf8;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    padding:10px 17px;
+    background:#101a27;
+    border:1px solid #263548;
+    color:#dbeafe;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.skill:hover{
+    border-color:#38bdf8;
+    color:#38bdf8;
+}
+
+/* PROJECTS */
+
+.project{
+    border-left:3px solid #38bdf8;
+}
+
+.project-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.project-tag{
+    font-size:12px;
+    padding:4px 9px;
+    border:1px solid #334155;
+    border-radius:20px;
+    color:#38bdf8;
+}
+
+/* PROFILES */
+
+.profiles{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.profile{
+    background:#0d131d;
+    border:1px solid #1e293b;
+    padding:25px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.profile:hover{
+    border-color:#38bdf8;
+    transform:translateY(-4px);
+}
+
+.profile h3{
+    color:#38bdf8;
+    margin-bottom:5px;
+}
+
+.profile p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-item{
+    background:#0d131d;
+    border:1px solid #1e293b;
+    padding:22px;
+    border-radius:10px;
+}
+
+.contact-item span{
+    display:block;
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.contact-item a{
+    color:#38bdf8;
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.contact-item a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #1e293b;
+    text-align:center;
+    padding:25px;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .hero{
+        padding:60px 7%;
+    }
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+    }
+
+    .hero-text p{
+        margin:auto;
+    }
+
+    .photo-area{
+        flex:0 0 auto;
+    }
+
+    .photo-frame{
+        width:240px;
+        height:240px;
+    }
+
+    .profiles{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    nav a{
+        margin:5px 8px;
+        display:inline-block;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>P. Reshma</h1>
-        <p>Computer Science Engineering Student | Cyber Security Enthusiast</p>
-    </header>
+<!-- NAVIGATION -->
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-
-        <!-- About -->
-        <section id="about">
-            <h2>About Me</h2>
-
-            <div class="about">
-                <p>
-                    I am a B.Tech student specializing in Computer Science and
-                    Engineering with Cyber Security. I am interested in
-                    software development, cybersecurity, artificial intelligence,
-                    and web technologies.
-                </p>
-
-                <a href="#contact" class="btn">Contact Me</a>
-            </div>
-        </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#profiles">Profiles</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 
-        <!-- Education -->
-        <section id="education">
-            <h2>Education</h2>
+<!-- HERO -->
 
-            <div class="card">
-                <h3>B.Tech in Computer Science and Engineering (Cyber Security)</h3>
+<section class="hero">
 
-                <p>
-                    <strong>AVN Institute of Engineering and Technology</strong>
-                    | 2024 – 2028
-                </p>
-            </div>
-        </section>
+    <div class="hero-content">
 
+        <div class="hero-text">
 
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
+            <div class="small">Hello, I'm</div>
 
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">Cyber Security</span>
-                <span class="skill">Machine Learning</span>
-                <span class="skill">GitHub</span>
-                <span class="skill">SQL</span>
-            </div>
-        </section>
+            <h1>P. <span>Reshma</span></h1>
 
+            <h2>Cybersecurity</h2>
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2>Projects</h2>
+            <p>
+                B.Tech Computer Science and Engineering student specializing
+                in Cyber Security, with an interest in cybersecurity,
+                artificial intelligence, web technologies and secure
+                software development.
+            </p>
 
-            <div class="card project">
-                <h3>MachShield AI</h3>
+            <div class="hero-buttons">
 
-                <p>
-                    A Cyber + AI + Mechanical project designed to combine
-                    machine monitoring, cybersecurity analysis, operational
-                    data analysis, and intelligent decision-making.
-                </p>
+                <a href="#projects" class="btn primary">
+                    View Projects
+                </a>
 
-                <p>
-                    <strong>Technologies:</strong>
-                    AI, Cyber Security, Python, Flask, HTML, CSS, JavaScript
-                </p>
-            </div>
-
-            <div class="card project">
-                <h3>Portfolio Website</h3>
-
-                <p>
-                    A personal portfolio website created to showcase my
-                    education, technical skills, projects, and professional
-                    profiles.
-                </p>
-
-                <p>
-                    <strong>Technologies:</strong>
-                    HTML, CSS, JavaScript, GitHub Pages
-                </p>
-            </div>
-        </section>
-
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-
-            <div class="card contact">
-
-                <p>
-                    <strong>Email:</strong>
-                    your-email@gmail.com
-                </p>
-
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/reshmapasula-prog"
-                       target="_blank">
-                        github.com/reshmapasula-prog
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Portfolio:</strong>
-                    <a href="https://reshmapasula-prog.github.io/"
-                       target="_blank">
-                        reshmapasula-prog.github.io
-                    </a>
-                </p>
-
-                <p>
-                    <strong>LinkedIn:</strong>
-                    <a href="#" target="_blank">
-                        Add your LinkedIn profile
-                    </a>
-                </p>
-
-                <p>
-                    <strong>LeetCode:</strong>
-                    <a href="https://leetcode.com/"
-                       target="_blank">
-                        LeetCode Profile
-                    </a>
-                </p>
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
 
             </div>
-        </section>
+
+        </div>
+
+
+        <!-- PROFILE PHOTO -->
+
+        <div class="photo-area">
+
+            <div class="photo-frame">
+
+                <img src="120767.png" alt="P. Reshma">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+        <span>01 — About</span>
+        <h2>About Me</h2>
+    </div>
+
+    <div class="about-box">
+
+        <p>
+            I am a B.Tech student pursuing Computer Science and Engineering
+            with Cyber Security. I am interested in understanding secure
+            systems, cybersecurity, artificial intelligence and modern
+            web technologies. I enjoy building practical projects that
+            combine technology with real-world problem solving.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="section-title">
+        <span>02 — Education</span>
+        <h2>Academic Background</h2>
+    </div>
+
+    <div class="card">
+
+        <h3>
+            B.Tech in Computer Science and Engineering
+            <span class="highlight">(Cyber Security)</span>
+        </h3>
+
+        <p>
+            <strong>AVN Institute of Engineering and Technology</strong>
+        </p>
+
+        <p>2024 – 2028</p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="section-title">
+        <span>03 — Expertise</span>
+        <h2>Technical Skills</h2>
+    </div>
+
+    <div class="skills">
+
+        <span class="skill">Python</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Cybersecurity</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Flask</span>
+        <span class="skill">GitHub</span>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-title">
+        <span>04 — Selected Work</span>
+        <h2>Projects</h2>
+    </div>
+
+
+    <div class="card project">
+
+        <div class="project-title">
+
+            <h3>MachShield AI</h3>
+
+            <span class="project-tag">
+                AI + Cyber + Mechanical
+            </span>
+
+        </div>
+
+        <p>
+            A cyber-physical AI project designed to combine machine
+            monitoring, cybersecurity analysis, operational data analysis
+            and intelligent risk detection in a unified system.
+        </p>
+
+        <p>
+            <strong>Technologies:</strong>
+            Python, Flask, HTML, CSS, JavaScript, AI, Cybersecurity
+        </p>
 
     </div>
 
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 P. Reshma | Portfolio</p>
-    </footer>
+    <div class="card project">
+
+        <div class="project-title">
+
+            <h3>Personal Portfolio</h3>
+
+            <span class="project-tag">
+                Web Development
+            </span>
+
+        </div>
+
+        <p>
+            A professional personal portfolio created to present academic
+            background, technical skills, projects and professional profiles.
+        </p>
+
+        <p>
+            <strong>Technologies:</strong>
+            HTML, CSS, JavaScript, GitHub Pages
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROFILES -->
+
+<section id="profiles">
+
+    <div class="section-title">
+        <span>05 — Online</span>
+        <h2>Professional Profiles</h2>
+    </div>
+
+    <div class="profiles">
+
+        <a class="profile"
+           href="https://github.com/reshmapasula-prog"
+           target="_blank">
+
+            <h3>GitHub</h3>
+
+            <p>
+                View my projects and development work →
+            </p>
+
+        </a>
+
+
+        <a class="profile"
+           href="https://reshmapasula-prog.github.io/"
+           target="_blank">
+
+            <h3>Portfolio</h3>
+
+            <p>
+                Visit my personal website →
+            </p>
+
+        </a>
+
+
+        <a class="profile"
+           href="https://leetcode.com/"
+           target="_blank">
+
+            <h3>LeetCode</h3>
+
+            <p>
+                View my coding profile →
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-title">
+        <span>06 — Contact</span>
+        <h2>Let's Connect</h2>
+    </div>
+
+    <div class="contact">
+
+        <div class="contact-item">
+
+            <span>Email</span>
+
+            <a href="mailto:reshmapasula9@gmail.com">
+                reshmapasula9@gmail.com
+            </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span>GitHub</span>
+
+            <a href="https://github.com/reshmapasula-prog"
+               target="_blank">
+                github.com/reshmapasula-prog
+            </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span>Portfolio</span>
+
+            <a href="https://reshmapasula-prog.github.io/"
+               target="_blank">
+                reshmapasula-prog.github.io
+            </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span>LinkedIn</span>
+
+            <a href="#" target="_blank">
+                Add LinkedIn Profile
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 P. Reshma · Cybersecurity
+
+</footer>
 
 </body>
 </html>
